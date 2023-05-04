@@ -1,0 +1,14 @@
+route:
+  group_by: ['instance_down','memory_usage']
+  receiver: 'mail'
+  repeat_interval: 1h
+
+receivers:
+  - name: 'mail'
+    email_configs:
+      - smarthost: 'smtp.gmail.com:465'
+        auth_username: 'shazzadhk12@gmail.com'
+        auth_password: "pzoumkslaqnfmjzu"
+        from: 'shazzadhk12@gmail.com'
+        to: 'shazzadhkict@gmail.com'
+        require_tls: false

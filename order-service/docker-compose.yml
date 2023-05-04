@@ -1,0 +1,11 @@
+version: '3.9'
+
+services:
+  order-db-service:
+    image: postgres
+    ports:
+      - 5433:5432
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: root
+      POSTGRES_DB: order-db

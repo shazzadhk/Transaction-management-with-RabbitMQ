@@ -1,0 +1,58 @@
+spring:
+  application:
+    name: order-service
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        #        dialect: org.hibernate.dialect.MySQLDialect
+        #        dialect: org.hibernate.dialect.MySQLInnoDBDialect
+        format_sql: true
+    show-sql: true
+  datasource:
+    url: jdbc:postgresql://localhost:5432/inventory
+    username: postgres
+    password: root
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+
+---
+
+server:
+  port: 8082
+
+---
+
+queue:
+  order-create: ORDER_CREATED_EVENT
+  payment-create: PAYMENT_CREATE_EVENT
+  order-canceled: ORDER_CANCELED_EVENT
+  reset-inventory: RESET_INVENTORY_EVENT
+
+exchange:
+  order-exchange: ORDER_EXCHANGE
+
+routingKey:
+  order-create-key: ORDER_CREATE_KEY
+  payment-create-key: PAYMENT_CREATE_KEY
+  order-canceled-key: ORDER_CANCELED_KEY
+#  reset-inventory-key: RESET_INVENTORY_KEY
+
+management:
+  endpoint:
+    metrics:
+      enabled: true
+    prometheus:
+      enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  prometheus:
+    metrics:
+     export:
+       enabled: true

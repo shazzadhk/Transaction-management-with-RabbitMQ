@@ -1,0 +1,22 @@
+groups:
+  - name: instance_down
+    rules:
+      - alert: InstanceDown
+        expr: up == 0
+        for: 1m
+        labels:
+          severity: critical
+        annotations:
+          description: job {{$labels.job}} is down for more than 1 minute
+          summary: job {{$labels.job}} is down
+
+  - name: memory_usage
+    rules:
+      - alert: over memory usage
+        expr: (windows_cs_physical_memory_bytes - windows_os_physical_memory_free_bytes) / windows_cs_physical_memory_bytes * 100 > 75
+        for: 1m
+        labels:
+          severity: warning
+        annotations:
+          description: Host machine memory is over 75% for 1 minute
+          summary: Host machine memory is over 75% for 1 minute
