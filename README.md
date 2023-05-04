@@ -38,7 +38,9 @@ In plain English, it provides you with tools to turn your time-series database (
 See documentation [here](https://grafana.com/)
 
 ## Download Project
-
+```gitexclude
+git clone https://github.com/shazzadhk/Transaction-management-with-RabbitMQ.git
+```
 ## Pre-Requisites
 
 1. Docker Engine
