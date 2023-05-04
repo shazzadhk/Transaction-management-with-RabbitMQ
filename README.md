@@ -8,7 +8,6 @@ project.
 
 ## Tech Stack
 
----
 1. Java 17
 2. Spring Boot 3
 3. Postgres
