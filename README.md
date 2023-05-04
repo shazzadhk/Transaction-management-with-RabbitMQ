@@ -87,3 +87,16 @@ For Prometheus
 6. Replace all IP Address of all jobs in prometheus.yml file with your own IP address
 7. Change email credentials with your own email credentials in config.yml file
 
+## Get API Documentation
+
+### Get Order Service API Doc
+
+http://localhost:8080/swagger-ui/index.html#/
+
+### Get Inventory Service API Doc
+
+http://localhost:8082/swagger-ui/index.html#/
+
+### Get Payment Service API Doc
+
+http://localhost:8088/swagger-ui/index.html#/
