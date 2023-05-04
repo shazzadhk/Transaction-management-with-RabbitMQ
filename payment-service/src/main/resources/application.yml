@@ -56,3 +56,7 @@ management:
     metrics:
       export:
         enabled: true
+
+springdoc:
+  swagger-ui:
+    path: /swagger-ui-custom.html

@@ -1,6 +1,6 @@
 spring:
   application:
-    name: order-service
+    name: inventory-service
   jpa:
     hibernate:
       ddl-auto: update
@@ -26,6 +26,7 @@ server:
   port: 8082
 
 ---
+
 
 queue:
   order-create: ORDER_CREATED_EVENT
@@ -56,3 +57,6 @@ management:
     metrics:
      export:
        enabled: true
+springdoc:
+  swagger-ui:
+    path: /swagger-ui-custom.html

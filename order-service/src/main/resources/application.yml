@@ -27,6 +27,7 @@ server:
 
 ---
 
+
 queue:
   order-create: ORDER_CREATED_EVENT
   order-done: ORDER_DONE_EVENT
@@ -58,3 +59,7 @@ management:
     metrics:
       export:
         enabled: true
+springdoc:
+  swagger-ui:
+    path: /swagger-ui-custom.html
+
