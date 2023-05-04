@@ -8,6 +8,7 @@ project.
 
 ## Tech Stack
 
+---
 1. Java 17
 2. Spring Boot 3
 3. Postgres
@@ -37,9 +38,7 @@ In plain English, it provides you with tools to turn your time-series database (
 See documentation [here](https://grafana.com/)
 
 ## Download Project
-```gitexclude
-git clone https://github.com/shazzadhk/Transaction-management-with-RabbitMQ.git
-```
+
 ## Pre-Requisites
 
 1. Docker Engine
@@ -88,22 +87,3 @@ For Prometheus
 6. Replace all IP Address of all jobs in prometheus.yml file with your own IP address
 7. Change email credentials with your own email credentials in config.yml file
 
-## To get API Documentation
-
-### To get API Doc for Order Service
-
-http://localhost:8080/swagger-ui/index.html#/
-
-### To get API Doc for Inventory Service
-
-
-http://localhost:8082/swagger-ui/index.html#/
-
-### To get API Doc for Payment Service
-
-
-http://localhost:8088/swagger-ui/index.html#/
-
-### contact info
-
-**LinkedIn** : https://www.linkedin.com/in/shazzad-hossain-b8aa20208/
