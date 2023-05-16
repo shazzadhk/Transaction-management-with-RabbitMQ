@@ -9,6 +9,10 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
+import java.util.HashMap;
+import java.util.Map;
+
+
 @Configuration
 public class RabbitMQConfig {
 
@@ -42,7 +46,10 @@ public class RabbitMQConfig {
     // spring bean for rabbitmq queue
     @Bean
     public Queue orderCreateQueue(){
-        return new Queue(orderCreateQueue);
+        //How much time a message lived in a queue
+        Map<String,Object> args = new HashMap<>();
+        args.put("x-message-ttl",60000);
+        return new Queue(orderCreateQueue,true,false,false,args);
     }
 
     @Bean
