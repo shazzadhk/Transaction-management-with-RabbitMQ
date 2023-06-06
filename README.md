@@ -78,10 +78,10 @@ For Prometheus
     ```
 2. It will automatically download docker images and run docker container
 3. Get Tools in the following port
-   * RabbitMQ in 15672
-   * Postgres in 5432
-   * Prometheus in 9090
-   * Grafana in 3000
+   * RabbitMQ default port is 15672
+   * Postgres default port is 5432
+   * Prometheus default port is 9090
+   * Grafana  default port is 3000
 4. Get all metrics in http://your-ip/actuator
 5. Get all Prometheus metrics in http://your-ip/actuator/prometheus
 6. Replace all IP Address of all jobs in prometheus.yml file with your own IP address
