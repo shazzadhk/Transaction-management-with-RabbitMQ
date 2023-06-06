@@ -78,7 +78,7 @@ For Prometheus
     ```
 2. It will automatically download docker images and run docker container
 3. Get Tools in the following port
-   * RabbitMQ default port is 15672 jwhjekorjsfsdjksod
+   * RabbitMQ default port is 15672
    * Postgres default port is 5432
    * Prometheus default port is 9090
    * Grafana  default port is 3000
